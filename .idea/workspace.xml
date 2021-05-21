@@ -2,13 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f5ba5f56-2d61-43d2-9383-2748aee305b8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/list.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/afbeeldingen/events.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/BerichtCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/BerichtCrudController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/CategorieCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/CategorieCrudController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/DashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/DashboardController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/EventCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/EventCrudController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/TaakCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/TaakCrudController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Event.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Event.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,7 +149,8 @@
       <workItem from="1621425213972" duration="15697000" />
       <workItem from="1621454053488" duration="8960000" />
       <workItem from="1621501619118" duration="16000" />
-      <workItem from="1621515292247" duration="15572000" />
+      <workItem from="1621515292247" duration="16148000" />
+      <workItem from="1621595769287" duration="8238000" />
     </task>
     <servers />
   </component>
@@ -160,13 +162,21 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="178" y="124" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1621536541826" />
-    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1621442118221">
+    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1621609673442">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1621442118221" />
-    <state x="478" y="145" width="579" height="534" key="find.popup" timestamp="1621438884757">
+    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1621609673442" />
+    <state x="359" y="0" key="CommitChangelistDialog2" timestamp="1621538387232">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="478" y="145" width="579" height="534" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1621438884757" />
+    <state x="359" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1621538387232" />
+    <state x="444" y="135" key="NewPhpClassDialog" timestamp="1621609079425">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="444" y="135" key="NewPhpClassDialog/0.0.1536.824@0.0.1536.824" timestamp="1621609079425" />
+    <state x="478" y="145" width="579" height="534" key="find.popup" timestamp="1621605984733">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="478" y="145" width="579" height="534" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1621605984733" />
   </component>
 </project>

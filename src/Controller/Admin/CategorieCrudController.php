@@ -12,6 +12,8 @@ class CategorieCrudController extends AbstractCrudController
         return Categorie::class;
     }
 
+
+
     /*
     public function configureFields(string $pageName): iterable
     {

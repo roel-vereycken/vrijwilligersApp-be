@@ -24,8 +24,9 @@ class BerichtCrudController extends AbstractCrudController
             IdField::new('id')->onlyOnIndex(),
             TextField::new('body'),
             AssociationField::new("eventBericht", "Evenement")->autocomplete(),
-            AssociationField::new("userBericht", "User")->autocomplete()
+            AssociationField::new("userBericht", "User")
         ];
     }
+
 
 }

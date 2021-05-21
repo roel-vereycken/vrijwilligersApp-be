@@ -9,7 +9,6 @@ use App\Entity\EventTaak;
 use App\Entity\Locatie;
 use App\Entity\Opmerking;
 use App\Entity\Taak;
-use App\Entity\Taakverdeling;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
 use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractDashboardController;
