@@ -1,0 +1,35 @@
+* {
+    font-family: "Helvetica Neue", "Helvetica", "sans-serif";
+    background-color: #d3dbe1;
+}
+
+form {
+    width: 500px;
+    display: block;
+    margin: 25vh auto;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+/* Gehaald van https://www.w3schools.com/css/tryit.asp?filename=trycss_forms en licht aangepast*/
+input, button {
+    background-color: whitesmoke;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+button {
+    display: block;
+    width: 20%;
+    background-color: #45a049;
+    color: whitesmoke;
+
+}
