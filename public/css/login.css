@@ -3,6 +3,11 @@
     background-color: #d3dbe1;
 }
 
+body {
+    height: 100vh;
+    overflow: hidden;
+}
+
 form {
     width: 500px;
     display: block;

@@ -130,10 +130,11 @@ class User implements UserInterface
 
     public function setPassword(string $password): self
     {
-        $this->password = $password;
+        $this->password = password_hash( $password, PASSWORD_ARGON2I );
 
         return $this;
     }
+
 
     /**
      * Returning a salt is only needed, if you are not using a modern

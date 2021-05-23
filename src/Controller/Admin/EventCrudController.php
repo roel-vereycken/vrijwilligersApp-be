@@ -62,6 +62,7 @@ class EventCrudController extends AbstractCrudController
                 ->onlyOnIndex(),
             TextField::new('Naam'),
             TextField::new('Beschrijving'),
+            AssociationField::new("eventCategorie", "Categorie"),
             DateField::new("Startdatum"),
             DateField::new("Einddatum"),
             TextAreaField::new("afbeeldingFile")

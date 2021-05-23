@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f5ba5f56-2d61-43d2-9383-2748aee305b8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/css/login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/EventCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/EventCrudController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/EventTaakCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/EventTaakCrudController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/UserCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/UserCrudController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Categorie.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Categorie.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -164,7 +166,7 @@
       <workItem from="1621501619118" duration="16000" />
       <workItem from="1621515292247" duration="16148000" />
       <workItem from="1621595769287" duration="8732000" />
-      <workItem from="1621776693922" duration="6811000" />
+      <workItem from="1621776693922" duration="16272000" />
     </task>
     <task id="LOCAL-00001" summary="admin Velden in NL fix">
       <created>1621610281312</created>
@@ -173,7 +175,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621610281312</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="login en register fix">
+      <created>1621783801222</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1621783801222</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -181,36 +190,37 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="admin Velden in NL fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="admin Velden in NL fix" />
+    <MESSAGE value="login en register fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="login en register fix" />
   </component>
   <component name="WindowStateProjectService">
     <state x="178" y="124" key="#com.intellij.ide.util.MemberChooser" timestamp="1621536541826">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="178" y="124" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1621536541826" />
-    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1621609673442">
+    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1621801662645">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1621609673442" />
-    <state x="359" y="0" key="CommitChangelistDialog2" timestamp="1621610280426">
+    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1621801662645" />
+    <state x="359" y="0" key="CommitChangelistDialog2" timestamp="1621783800506">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="359" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1621610280426" />
+    <state x="359" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1621783800506" />
     <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1621610368202">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1621610368202" />
-    <state x="444" y="135" key="NewPhpClassDialog" timestamp="1621609079425">
+    <state x="263" y="220" key="NewPhpClassDialog" timestamp="1621793789728">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="444" y="135" key="NewPhpClassDialog/0.0.1536.824@0.0.1536.824" timestamp="1621609079425" />
-    <state x="361" y="132" key="Vcs.Push.Dialog.v2" timestamp="1621610292269">
+    <state x="263" y="220" key="NewPhpClassDialog/0.0.1536.824@0.0.1536.824" timestamp="1621793789728" />
+    <state x="361" y="132" key="Vcs.Push.Dialog.v2" timestamp="1621783804586">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="132" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1621610292269" />
-    <state x="478" y="145" width="579" height="534" key="find.popup" timestamp="1621605984733">
+    <state x="361" y="132" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1621783804586" />
+    <state x="478" y="145" width="579" height="534" key="find.popup" timestamp="1621799570878">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="478" y="145" width="579" height="534" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1621605984733" />
+    <state x="478" y="145" width="579" height="534" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1621799570878" />
   </component>
 </project>
