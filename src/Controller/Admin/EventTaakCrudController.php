@@ -28,6 +28,8 @@ class EventTaakCrudController extends AbstractCrudController
     {
         return $actions
 
+            ->remove(Crud::PAGE_EDIT, Action::SAVE_AND_CONTINUE)
+
             ->update(Crud::PAGE_INDEX, Action::NEW, function (Action $action) {
                 return $action
                     ->setLabel("Voeg nieuwe taakverdeling toe")
@@ -45,13 +47,30 @@ class EventTaakCrudController extends AbstractCrudController
                     ->setLabel("Verwijder")
                     ->setIcon("fa fa-trash");
             }
+            )
+            ->update(Crud::PAGE_NEW,Action::SAVE_AND_RETURN, function (Action $action) {
+                return $action
+                    ->setLabel("Maak nieuwe taakverdeling aan");
+            }
+            )
+            ->update(Crud::PAGE_NEW,Action::SAVE_AND_ADD_ANOTHER, function (Action $action) {
+                return $action
+                    ->setLabel("Maak taakverdeling aan en voeg er nog een toe");
+            }
+            )
+            ->update(Crud::PAGE_EDIT,Action::SAVE_AND_RETURN, function (Action $action) {
+                return $action
+                    ->setLabel("Pas taakverdeling aan");
+            }
             );
     }
 
     public function configureCrud(Crud $crud): Crud
     {
         return $crud
-            ->setPageTitle("index", "Taakverdeling");
+            ->setPageTitle("index", "Taakverdeling")
+            ->setPageTitle("new", "Nieuwe taakverdeling")
+            ->setPageTitle("edit", "Werk taakverdeling bij");
     }
 
     public function configureFields(string $pageName): iterable

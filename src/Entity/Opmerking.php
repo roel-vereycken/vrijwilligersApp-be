@@ -137,6 +137,6 @@ class Opmerking
     // toevoeging voor easyadmin: om de foreign key te herkennen
     public function __toString()
     {
-        return strval($this->getId());
+        return strval($this->getBody());
     }
 }
