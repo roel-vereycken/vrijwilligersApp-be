@@ -2,14 +2,23 @@
 
 namespace App\Entity;
 
+use ApiPlatform\Core\Annotation\ApiFilter;
 use ApiPlatform\Core\Annotation\ApiResource;
 use App\Repository\BerichtRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Serializer\Annotation\Groups;
+use ApiPlatform\Core\Bridge\Doctrine\Orm\Filter\SearchFilter;
+
 
 /**
- * @ApiResource()
+ * @ApiResource(
+ *     normalizationContext={"groups"={"bericht:read"}},
+ *     denormalizationContext={"groups"={"bericht:write"}}
+ * )
+ * @ApiFilter(SearchFilter::class, properties={"eventBericht.id": "partial"})
+
  * @ORM\Entity(repositoryClass=BerichtRepository::class)
  */
 class Bericht
@@ -18,26 +27,32 @@ class Bericht
      * @ORM\Id
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
+     * @Groups({"bericht:read"})
+
      */
     private $id;
 
     /**
      * @ORM\Column(type="text")
+     * @Groups({"bericht:read", "bericht:write"})
      */
     private $body;
 
     /**
      * @ORM\ManyToOne(targetEntity=User::class, inversedBy="berichten")
+     * @Groups({"bericht:read", "bericht:write"})
      */
     private $userBericht;
 
     /**
      * @ORM\ManyToOne(targetEntity=Event::class, inversedBy="berichten")
+     * @Groups({"bericht:write"})
      */
     private $eventBericht;
 
     /**
      * @ORM\OneToMany(targetEntity=Opmerking::class, mappedBy="opmerkingBericht")
+     * @Groups({"bericht:read"})
      */
     private $opmerkingen;
 

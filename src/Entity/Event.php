@@ -7,11 +7,19 @@ use App\Repository\EventRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Serializer\Annotation\Groups;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 /**
- * @ApiResource()
+ * @ApiResource(
+ *     attributes={
+ *          "pagination_items_per_page"=6
+ *           },
+ *      normalizationContext={"groups"={"event:read"}},
+ *      denormalizationContext={"groups"={"event:write"}}
+ * )
  * @ORM\Entity(repositoryClass=EventRepository::class)
+ *
  * @Vich\Uploadable()
  */
 class Event
@@ -20,31 +28,37 @@ class Event
      * @ORM\Id
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
+     * @Groups({"event:read"})
      */
     private $id;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Groups({"event:read"})
      */
     private $naam;
 
     /**
      * @ORM\Column(type="text", nullable=true)
+     * @Groups({"event:read"})
      */
     private $beschrijving;
 
     /**
      * @ORM\Column(type="date", nullable=true)
+     * @Groups({"event:read"})
      */
     private $startDatum;
 
     /**
      * @ORM\Column(type="date", nullable=true)
+     * @Groups({"event:read"})
      */
     private $eindDatum;
 
     /**
      * @ORM\Column(type="string", length=100, nullable=true)
+     * @Groups({"event:read"})
      */
     private $afbeelding;
 
@@ -60,21 +74,25 @@ class Event
 
     /**
      * @ORM\OneToMany(targetEntity=Bericht::class, mappedBy="eventBericht")
+     * @Groups({"event:read"})
      */
     private $berichten;
 
     /**
      * @ORM\OneToMany(targetEntity=EventTaak::class, mappedBy="eventId", cascade={"persist", "remove"})
+     * @Groups({"event:read", "eventTaak:read"})
      */
     private $eventTaken;
 
     /**
      * @ORM\ManyToOne(targetEntity=Locatie::class, inversedBy="events")
+     * @Groups({"event:read"})
      */
     private $eventLocatie;
 
     /**
      * @ORM\ManyToOne(targetEntity=Categorie::class, inversedBy="events")
+     * @Groups({"event:read"})
      */
     private $eventCategorie;
 

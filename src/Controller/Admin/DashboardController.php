@@ -48,6 +48,7 @@ class DashboardController extends AbstractDashboardController
 
         // Tussentitel voor de takensectie
         yield MenuItem::section("Taken");
+
         // Verwijzingen naar de juiste controllers ivm taken
         yield MenuItem::linkToCrud('Taken', 'fa fa-tasks', Taak::class);
         yield MenuItem::linkToCrud('Taak op evenement', 'fa fa-tasks', EventTaak::class);

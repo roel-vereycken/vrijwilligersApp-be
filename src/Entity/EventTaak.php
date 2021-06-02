@@ -7,9 +7,13 @@ use App\Repository\EventTaakRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 /**
- * @ApiResource()
+ * @ApiResource(
+ *     normalizationContext={"groups"={"eventTaak:read"}},
+ *     denormalizationContext={"groups"={"eventTaak:write"}}
+ * )
  * @ORM\Entity(repositoryClass=EventTaakRepository::class)
  */
 class EventTaak
@@ -18,6 +22,7 @@ class EventTaak
      * @ORM\Id
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
+     * @Groups({"event:read"})
      */
     private $id;
 
@@ -38,6 +43,7 @@ class EventTaak
 
     /**
      * @ORM\ManyToOne(targetEntity=Taak::class, inversedBy="eventTaken")
+     * @Groups({"event:read"})
      */
     private $taakId;
 
@@ -50,6 +56,7 @@ class EventTaak
      * @var User[]
      * @ORM\ManyToMany(targetEntity=User::class, mappedBy="taakverdeling", cascade={"persist", "remove"})
      * @ORM\JoinTable(name="user_event_taak")
+     * @Groups({"event:read"})
      */
     protected $users;
 

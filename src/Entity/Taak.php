@@ -7,6 +7,7 @@ use App\Repository\TaakRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 /**
  * @ApiResource()
@@ -23,11 +24,13 @@ class Taak
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Groups({"event:read"})
      */
     private $naam;
 
     /**
      * @ORM\Column(type="text", nullable=true)
+     * @Groups({"event:read"})
      */
     private $omschrijving;
 

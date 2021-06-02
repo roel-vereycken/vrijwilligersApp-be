@@ -3,15 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="f5ba5f56-2d61-43d2-9383-2748aee305b8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/BerichtCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/BerichtCrudController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/CategorieCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/CategorieCrudController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/EventCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/EventCrudController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/EventTaakCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/EventTaakCrudController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/OpmerkingCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/OpmerkingCrudController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/TaakCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/TaakCrudController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20210518151154.php" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/Version20210518151154.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/DashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/DashboardController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Bericht.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Bericht.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Event.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Event.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/EventTaak.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/EventTaak.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Opmerking.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Opmerking.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Taak.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Taak.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,7 +169,16 @@
       <workItem from="1621515292247" duration="16148000" />
       <workItem from="1621595769287" duration="8732000" />
       <workItem from="1621776693922" duration="16678000" />
-      <workItem from="1621864720041" duration="6113000" />
+      <workItem from="1621864720041" duration="6392000" />
+      <workItem from="1621933874489" duration="14000" />
+      <workItem from="1621951760118" duration="274000" />
+      <workItem from="1622031113884" duration="4480000" />
+      <workItem from="1622114797012" duration="2096000" />
+      <workItem from="1622381167734" duration="1409000" />
+      <workItem from="1622407079643" duration="624000" />
+      <workItem from="1622446482206" duration="9345000" />
+      <workItem from="1622504426212" duration="2183000" />
+      <workItem from="1622634764616" duration="11855000" />
     </task>
     <task id="LOCAL-00001" summary="admin Velden in NL fix">
       <created>1621610281312</created>
@@ -193,7 +201,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621802311793</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="aanpassing forms">
+      <created>1621892849131</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1621892849131</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -203,7 +218,8 @@
     <MESSAGE value="admin Velden in NL fix" />
     <MESSAGE value="login en register fix" />
     <MESSAGE value="login en register fix2" />
-    <option name="LAST_COMMIT_MESSAGE" value="login en register fix2" />
+    <MESSAGE value="aanpassing forms" />
+    <option name="LAST_COMMIT_MESSAGE" value="aanpassing forms" />
   </component>
   <component name="WindowStateProjectService">
     <state x="178" y="124" key="#com.intellij.ide.util.MemberChooser" timestamp="1621536541826">
@@ -214,10 +230,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1621869458424" />
-    <state x="359" y="0" key="CommitChangelistDialog2" timestamp="1621802311081">
+    <state x="359" y="0" key="CommitChangelistDialog2" timestamp="1621892848100">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="359" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1621802311081" />
+    <state x="359" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1621892848100" />
     <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1621610368202">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -226,10 +242,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="263" y="220" key="NewPhpClassDialog/0.0.1536.824@0.0.1536.824" timestamp="1621793789728" />
-    <state x="361" y="132" key="Vcs.Push.Dialog.v2" timestamp="1621802315370">
+    <state x="361" y="132" key="Vcs.Push.Dialog.v2" timestamp="1621892852453">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="132" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1621802315370" />
+    <state x="361" y="132" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1621892852453" />
     <state x="478" y="145" width="579" height="534" key="find.popup" timestamp="1621799570878">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

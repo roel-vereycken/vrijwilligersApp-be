@@ -2,14 +2,21 @@
 
 namespace App\Entity;
 
+
 use ApiPlatform\Core\Annotation\ApiResource;
 use App\Repository\OpmerkingRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Serializer\Annotation\Groups;
+
 
 /**
- * @ApiResource()
+ * @ApiResource(
+ *     normalizationContext={"groups"={"opmerking:read"}},
+ *     denormalizationContext={"groups"={"opmerking:write"}}
+ * )
+
  * @ORM\Entity(repositoryClass=OpmerkingRepository::class)
  */
 class Opmerking
@@ -18,21 +25,25 @@ class Opmerking
      * @ORM\Id
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
+     * @Groups({"bericht:read"})
      */
     private $id;
 
     /**
      * @ORM\Column(type="text")
+     * @Groups({"bericht:read", "opmerking:read", "opmerking:write"})
      */
     private $body;
 
     /**
      * @ORM\ManyToOne(targetEntity=Bericht::class, inversedBy="opmerkingen")
+     * @Groups({"opmerking:write"})
      */
     private $opmerkingBericht;
 
     /**
      * @ORM\ManyToOne(targetEntity=User::class, inversedBy="opmerkingen")
+     * @Groups({"bericht:read", "opmerking:write"})
      */
     private $opmerkingUser;
 
