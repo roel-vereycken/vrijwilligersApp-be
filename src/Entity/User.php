@@ -30,6 +30,7 @@ class User implements UserInterface
 
     /**
      * @ORM\Column(type="string", length=180, unique=true)
+     * @Groups ({"user:read", "user:write"})
      */
     private $email;
 
@@ -46,13 +47,13 @@ class User implements UserInterface
 
     /**
      * @ORM\Column(type="string", length=100)
-     * @Groups({"bericht:read", "opmerking:read"})
+     * @Groups({"bericht:read", "opmerking:read", "user:read", "user:write"})
      */
     private $voornaam;
 
     /**
      * @ORM\Column(type="string", length=100)
-     * @Groups({"bericht:read", "opmerking:read"})
+     * @Groups({"bericht:read", "opmerking:read", "user:read", "user:write"})
      */
     private $naam;
 

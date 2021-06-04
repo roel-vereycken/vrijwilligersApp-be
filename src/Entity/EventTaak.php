@@ -33,17 +33,19 @@ class EventTaak
 
     /**
      * @ORM\Column(type="time", nullable=true)
+     * @Groups({"event:read"})
      */
     private $startUur;
 
     /**
      * @ORM\Column(type="time", nullable=true)
+     * @Groups({"event:read", "eventTaak:read"})
      */
     private $eindUur;
 
     /**
-     * @ORM\ManyToOne(targetEntity=Taak::class, inversedBy="eventTaken")
-     * @Groups({"event:read"})
+     * @ORM\ManyToOne(targetEntity=Taak::class, inversedBy="eventTaken", cascade={"persist", "remove"})
+     * @Groups({"event:read", "eventTaak:read"})
      */
     private $taakId;
 
@@ -172,6 +174,12 @@ class EventTaak
         }
         $this->users->removeElement($user);
         $user->removeTaakverdeling($this);
+    }
+
+    // toevoeging voor easyadmin: om de foreign key te herkennen
+    public function __toString()
+    {
+        return strval($this->getTaakId());
     }
 
 

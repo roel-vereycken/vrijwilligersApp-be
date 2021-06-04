@@ -8,6 +8,8 @@ use EasyCorp\Bundle\EasyAdminBundle\Config\Actions;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Field\AssociationField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\ChoiceField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\CollectionField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\DateField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\IdField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
@@ -79,8 +81,9 @@ class EventCrudController extends AbstractCrudController
                 ->onlyOnForms(),
             ImageField::new('Afbeelding')
                 ->setBasePath('/images/afbeeldingen')
-                ->hideOnForm()
-            //CollectionField::new("eventTaken", "Taken")
+                ->hideOnForm(),
+            CollectionField::new("eventTaken", "Taken")->onlyOnIndex(),
+
         ];
     }
 

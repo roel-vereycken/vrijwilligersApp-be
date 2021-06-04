@@ -219,6 +219,7 @@ class Event
         return $this;
     }
 
+
     /**
      * @return Collection|EventTaak[]
      */
@@ -226,6 +227,7 @@ class Event
     {
         return $this->eventTaken;
     }
+
 
     public function addEventTaken(EventTaak $eventTaken): self
     {
