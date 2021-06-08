@@ -34,7 +34,7 @@ class Event
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Groups({"event:read"})
+     * @Groups({"event:read", "user:read"})
      */
     private $naam;
 
@@ -92,7 +92,7 @@ class Event
 
     /**
      * @ORM\ManyToOne(targetEntity=Categorie::class, inversedBy="events")
-     * @Groups({"event:read"})
+     * @Groups({"event:read", "user:read"})
      */
     private $eventCategorie;
 

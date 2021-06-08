@@ -17,7 +17,7 @@ use ApiPlatform\Core\Bridge\Doctrine\Orm\Filter\SearchFilter;
  *     normalizationContext={"groups"={"bericht:read"}},
  *     denormalizationContext={"groups"={"bericht:write"}}
  * )
- * @ApiFilter(SearchFilter::class, properties={"eventBericht.id": "partial"})
+ * @ApiFilter(SearchFilter::class, properties={"eventBericht.id": "exact"})
 
  * @ORM\Entity(repositoryClass=BerichtRepository::class)
  */

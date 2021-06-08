@@ -2,18 +2,23 @@
 
 namespace App\Entity;
 
+use ApiPlatform\Core\Annotation\ApiFilter;
 use ApiPlatform\Core\Annotation\ApiResource;
 use App\Repository\EventTaakRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Serializer\Annotation\Groups;
+use ApiPlatform\Core\Bridge\Doctrine\Orm\Filter\SearchFilter;
+
 
 /**
  * @ApiResource(
  *     normalizationContext={"groups"={"eventTaak:read"}},
  *     denormalizationContext={"groups"={"eventTaak:write"}}
  * )
+ * @ApiFilter(SearchFilter::class, properties={"eventId.id": "exact"})
+
  * @ORM\Entity(repositoryClass=EventTaakRepository::class)
  */
 class EventTaak
@@ -22,35 +27,37 @@ class EventTaak
      * @ORM\Id
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
-     * @Groups({"event:read"})
+     * @Groups({"event:read", "eventTaak:read", "user:read"})
      */
     private $id;
 
     /**
      * @ORM\Column(type="date")
+     * @Groups({"eventTaak:read", "user:read"})
      */
     private $datum;
 
     /**
      * @ORM\Column(type="time", nullable=true)
-     * @Groups({"event:read"})
+     * @Groups({"eventTaak:read"})
      */
     private $startUur;
 
     /**
      * @ORM\Column(type="time", nullable=true)
-     * @Groups({"event:read", "eventTaak:read"})
+     * @Groups({"eventTaak:read"})
      */
     private $eindUur;
 
     /**
      * @ORM\ManyToOne(targetEntity=Taak::class, inversedBy="eventTaken", cascade={"persist", "remove"})
-     * @Groups({"event:read", "eventTaak:read"})
+     * @Groups({"event:read", "eventTaak:read", "user:read"})
      */
     private $taakId;
 
     /**
      * @ORM\ManyToOne(targetEntity=Event::class, inversedBy="eventTaken")
+     * @Groups({"user:read"})
      */
     private $eventId;
 
@@ -58,9 +65,15 @@ class EventTaak
      * @var User[]
      * @ORM\ManyToMany(targetEntity=User::class, mappedBy="taakverdeling", cascade={"persist", "remove"})
      * @ORM\JoinTable(name="user_event_taak")
-     * @Groups({"event:read"})
+     * @Groups({"event:read", "eventTaak:read", "eventTaak:write"})
      */
     protected $users;
+
+    /**
+     * @ORM\Column(type="integer")
+     * @Groups({"eventTaak:read"})
+     */
+    private $aantalVrijwilligers;
 
     public function __construct()
     {
@@ -180,6 +193,18 @@ class EventTaak
     public function __toString()
     {
         return strval($this->getTaakId());
+    }
+
+    public function getAantalVrijwilligers(): ?int
+    {
+        return $this->aantalVrijwilligers;
+    }
+
+    public function setAantalVrijwilligers(int $aantalVrijwilligers): self
+    {
+        $this->aantalVrijwilligers = $aantalVrijwilligers;
+
+        return $this;
     }
 
 

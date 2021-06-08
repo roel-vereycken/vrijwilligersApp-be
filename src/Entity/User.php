@@ -25,6 +25,7 @@ class User implements UserInterface
      * @ORM\Id
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
+     * @Groups ({"eventTaak:read"})
      */
     private $id;
 
@@ -47,13 +48,13 @@ class User implements UserInterface
 
     /**
      * @ORM\Column(type="string", length=100)
-     * @Groups({"bericht:read", "opmerking:read", "user:read", "user:write"})
+     * @Groups({"bericht:read", "opmerking:read", "user:read", "eventTaak:read", "user:write"})
      */
     private $voornaam;
 
     /**
      * @ORM\Column(type="string", length=100)
-     * @Groups({"bericht:read", "opmerking:read", "user:read", "user:write"})
+     * @Groups({"bericht:read", "opmerking:read", "user:read", "eventTaak:read", "user:write"})
      */
     private $naam;
 
@@ -71,8 +72,11 @@ class User implements UserInterface
      * @var EventTaak[]
      * @ORM\ManyToMany(targetEntity=EventTaak::class, inversedBy="users")
      * @ORM\JoinTable(name="user_event_taak")
+     * @Groups({"user:read"})
      */
     protected $taakverdeling;
+
+
 
     public function __construct()
     {
@@ -85,6 +89,7 @@ class User implements UserInterface
     {
         return $this->id;
     }
+
 
     public function getEmail(): ?string
     {
@@ -252,13 +257,13 @@ class User implements UserInterface
         return $this->getVoornaam() . " " . $this->getNaam();
     }
 
-//    /**
-//     * @return EventTaak[]
-//     */
-//    public function getTaakverdeling()
-//    {
-//        return $this->taakverdeling;
-//    }
+    /**
+     * @return EventTaak[]
+     */
+    public function getTaakverdeling()
+    {
+        return $this->taakverdeling;
+    }
 //
 //    /**
 //     *

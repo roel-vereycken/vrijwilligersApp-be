@@ -24,13 +24,13 @@ class Taak
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Groups({"event:read"})
+     * @Groups({"eventTaak:read", "user:read"})
      */
     private $naam;
 
     /**
      * @ORM\Column(type="text", nullable=true)
-     * @Groups({"event:read"})
+     * @Groups({"eventTaak:read"})
      */
     private $omschrijving;
 
