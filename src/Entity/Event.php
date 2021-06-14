@@ -2,6 +2,9 @@
 
 namespace App\Entity;
 
+use ApiPlatform\Core\Annotation\ApiFilter;
+use ApiPlatform\Core\Bridge\Doctrine\Orm\Filter\OrderFilter;
+use ApiPlatform\Core\Bridge\Doctrine\Orm\Filter\SearchFilter;
 use ApiPlatform\Core\Annotation\ApiResource;
 use App\Repository\EventRepository;
 use Doctrine\Common\Collections\ArrayCollection;
@@ -19,6 +22,8 @@ use Vich\UploaderBundle\Mapping\Annotation as Vich;
  *      denormalizationContext={"groups"={"event:write"}}
  * )
  * @ORM\Entity(repositoryClass=EventRepository::class)
+ * @ApiFilter(OrderFilter::class, properties={"startDatum"})
+ * @ApiFilter(SearchFilter::class, properties={"eventCategorie.naam": "partial"})
  *
  * @Vich\Uploadable()
  */

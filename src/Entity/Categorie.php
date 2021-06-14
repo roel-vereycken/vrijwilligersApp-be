@@ -27,7 +27,7 @@ class Categorie
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Groups({"user:read"})
+     * @Groups({"user:read", "categorie:read"})
      */
     private $naam;
 
