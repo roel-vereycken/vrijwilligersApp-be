@@ -7,9 +7,16 @@ use App\Repository\LocatieRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 /**
- * @ApiResource()
+ * @ApiResource(
+ *     collectionOperations={"get"},
+ *     itemOperations={"get"},
+ *
+ *     normalizationContext={"groups"={"locatie:read"}},
+ *     denormalizationContext={"groups"={"locatie:write"}}
+ * )
  * @ORM\Entity(repositoryClass=LocatieRepository::class)
  */
 class Locatie
@@ -23,11 +30,13 @@ class Locatie
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Groups({"event:read"})
      */
     private $naam;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Groups({"event:read"})
      */
     private $adres;
 
@@ -38,8 +47,15 @@ class Locatie
 
     /**
      * @ORM\Column(type="smallint")
+     * @Groups({"event:read"})
      */
     private $postcode;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     * @Groups({"event:read"})
+     */
+    private $gemeente;
 
     public function __construct()
     {
@@ -113,6 +129,18 @@ class Locatie
     public function setPostcode(int $postcode): self
     {
         $this->postcode = $postcode;
+
+        return $this;
+    }
+
+    public function getGemeente(): ?string
+    {
+        return $this->gemeente;
+    }
+
+    public function setGemeente(string $gemeente): self
+    {
+        $this->gemeente = $gemeente;
 
         return $this;
     }

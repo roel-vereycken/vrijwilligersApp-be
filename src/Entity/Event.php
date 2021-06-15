@@ -18,8 +18,12 @@ use Vich\UploaderBundle\Mapping\Annotation as Vich;
  *     attributes={
  *          "pagination_items_per_page"=6
  *           },
- *      normalizationContext={"groups"={"event:read"}},
- *      denormalizationContext={"groups"={"event:write"}}
+ *
+ *     collectionOperations={"get"},
+ *     itemOperations={"get"},
+ *
+ *     normalizationContext={"groups"={"event:read"}},
+ *     denormalizationContext={"groups"={"event:write"}}
  * )
  * @ORM\Entity(repositoryClass=EventRepository::class)
  * @ApiFilter(OrderFilter::class, properties={"startDatum"})
@@ -78,7 +82,7 @@ class Event
     private $updatedAt;
 
     /**
-     * @ORM\OneToMany(targetEntity=Bericht::class, mappedBy="eventBericht")
+     * @ORM\OneToMany(targetEntity=Bericht::class, mappedBy="eventBericht", cascade={"persist", "remove"})
      * @Groups({"event:read"})
      */
     private $berichten;

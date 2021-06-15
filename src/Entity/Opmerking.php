@@ -57,9 +57,17 @@ class Opmerking
      */
     private $opmerkingen;
 
+    /**
+     * @ORM\Column(type="datetime", nullable=true)
+     * @Groups({"bericht:read"})
+     */
+    private $createdAt;
+
     public function __construct()
     {
         $this->opmerkingen = new ArrayCollection();
+        $this->createdAt = new\DateTimeImmutable('+2 hours');
+
     }
 
     public function getId(): ?int
@@ -150,4 +158,16 @@ class Opmerking
     {
         return strval($this->getBody());
     }
+
+    public function getCreatedAt(): ?\DateTimeInterface
+    {
+        return $this->createdAt;
+    }
+
+//    public function setCreatedAt(?\DateTimeInterface $createdAt): self
+//    {
+//        $this->createdAt = $createdAt;
+//
+//        return $this;
+//    }
 }

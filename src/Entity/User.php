@@ -8,12 +8,16 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Serializer\Annotation\Groups;
 
 /**
  * @ORM\Entity(repositoryClass=UserRepository::class)
  * @ApiResource(
+ *     collectionOperations={"get"},
+ *     itemOperations={"get", "put"},
+ *
  *     normalizationContext={"groups"={"user:read"}},
  *     denormalizationContext={"groups"={"user:write"}}
  * )
@@ -25,7 +29,7 @@ class User implements UserInterface
      * @ORM\Id
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
-     * @Groups ({"eventTaak:read"})
+     * @Groups ({"eventTaak:read", "user:read"})
      */
     private $id;
 
@@ -59,7 +63,7 @@ class User implements UserInterface
     private $naam;
 
     /**
-     * @ORM\OneToMany(targetEntity=Bericht::class, mappedBy="userBericht")
+     * @ORM\OneToMany(targetEntity=Bericht::class, mappedBy="userBericht" , cascade={"persist", "remove"})
      */
     private $berichten;
 
@@ -75,6 +79,12 @@ class User implements UserInterface
      * @Groups({"user:read"})
      */
     protected $taakverdeling;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     * @Groups({"user:read", "user:write"})
+     */
+    private $telefoonNummer;
 
 
 
@@ -142,7 +152,7 @@ class User implements UserInterface
 
     public function setPassword(string $password): self
     {
-        $this->password = password_hash( $password, PASSWORD_ARGON2I );
+        $this->password = password_hash( $password, PASSWORD_ARGON2ID );
 
         return $this;
     }
@@ -301,6 +311,18 @@ class User implements UserInterface
         }
         $this->taakverdeling->removeElement($taak);
         $taak->removeUser($this);
+    }
+
+    public function getTelefoonNummer(): ?string
+    {
+        return $this->telefoonNummer;
+    }
+
+    public function setTelefoonNummer(?string $telefoonNummer): self
+    {
+        $this->telefoonNummer = $telefoonNummer;
+
+        return $this;
     }
 
 }

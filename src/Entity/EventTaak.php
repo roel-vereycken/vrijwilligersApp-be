@@ -14,6 +14,9 @@ use ApiPlatform\Core\Bridge\Doctrine\Orm\Filter\SearchFilter;
 
 /**
  * @ApiResource(
+ *     collectionOperations={"get"},
+ *     itemOperations={"get", "put"},
+ *
  *     normalizationContext={"groups"={"eventTaak:read"}},
  *     denormalizationContext={"groups"={"eventTaak:write"}}
  * )

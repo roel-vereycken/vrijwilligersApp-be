@@ -5,6 +5,7 @@ namespace App\Entity;
 use ApiPlatform\Core\Annotation\ApiFilter;
 use ApiPlatform\Core\Annotation\ApiResource;
 use App\Repository\BerichtRepository;
+use App\Services\TextAreaService;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
@@ -51,14 +52,21 @@ class Bericht
     private $eventBericht;
 
     /**
-     * @ORM\OneToMany(targetEntity=Opmerking::class, mappedBy="opmerkingBericht")
+     * @ORM\OneToMany(targetEntity=Opmerking::class, mappedBy="opmerkingBericht", cascade={"persist", "remove"})
      * @Groups({"bericht:read"})
      */
     private $opmerkingen;
 
+    /**
+     * @ORM\Column(type="datetime", nullable=true)
+     * @Groups({"bericht:read"})
+     */
+    private $createdAt;
+
     public function __construct()
     {
         $this->opmerkingen = new ArrayCollection();
+        $this->createdAt = new\DateTimeImmutable('+2 hours');
     }
 
     public function getId(): ?int
@@ -71,9 +79,9 @@ class Bericht
         return $this->body;
     }
 
-    public function setBody(string $body): self
+    public function setBody(string $body, TextAreaService $textAreaService): self
     {
-        $this->body = $body;
+        $this->body = $textAreaService->stripTags($body);
 
         return $this;
     }
@@ -137,4 +145,16 @@ class Bericht
     {
         return strval($this->getBody());
     }
+
+    public function getCreatedAt(): ?\DateTimeInterface
+    {
+        return $this->createdAt;
+    }
+
+//    public function setCreatedAt(?\DateTimeInterface $createdAt): self
+//    {
+//        $this->createdAt = $createdAt;
+//
+//        return $this;
+//    }
 }
