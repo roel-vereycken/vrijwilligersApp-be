@@ -53,7 +53,7 @@ class EventTaak
     private $eindUur;
 
     /**
-     * @ORM\ManyToOne(targetEntity=Taak::class, inversedBy="eventTaken", cascade={"persist", "remove"})
+     * @ORM\ManyToOne(targetEntity=Taak::class, inversedBy="eventTaken")
      * @Groups({"event:read", "eventTaak:read", "user:read"})
      */
     private $taakId;
@@ -66,7 +66,7 @@ class EventTaak
 
     /**
      * @var User[]
-     * @ORM\ManyToMany(targetEntity=User::class, mappedBy="taakverdeling", cascade={"persist", "remove"})
+     * @ORM\ManyToMany(targetEntity=User::class, mappedBy="taakverdeling")
      * @ORM\JoinTable(name="user_event_taak")
      * @Groups({"event:read", "eventTaak:read", "eventTaak:write"})
      */

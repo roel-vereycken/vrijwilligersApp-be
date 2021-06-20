@@ -53,10 +53,10 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::linkToCrud('Taken', 'fa fa-tasks', Taak::class);
         yield MenuItem::linkToCrud('Taak op evenement', 'fa fa-tasks', EventTaak::class);
 
-        yield MenuItem::section("Berichten/opmerkingen");
-
-        yield MenuItem::linkToCrud('Berichten', 'fa fa-comment', Bericht::class);
-        yield MenuItem::linkToCrud('Opmerkingen', 'fa fa-comments', Opmerking::class);
+//        yield MenuItem::section("Berichten/opmerkingen");
+//
+//        yield MenuItem::linkToCrud('Berichten', 'fa fa-comment', Bericht::class);
+//        yield MenuItem::linkToCrud('Opmerkingen', 'fa fa-comments', Opmerking::class);
 
         // Tussentitel voor de specificaties
         yield MenuItem::section("Specificaties");

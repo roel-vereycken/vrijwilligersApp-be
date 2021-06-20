@@ -83,13 +83,13 @@ class Event
 
     /**
      * @ORM\OneToMany(targetEntity=Bericht::class, mappedBy="eventBericht", cascade={"persist", "remove"})
-     * @Groups({"event:read"})
+     *
      */
     private $berichten;
 
     /**
      * @ORM\OneToMany(targetEntity=EventTaak::class, mappedBy="eventId", cascade={"persist", "remove"})
-     * @Groups({"event:read", "eventTaak:read"})
+     * @Groups({"eventTaak:read"})
      */
     private $eventTaken;
 

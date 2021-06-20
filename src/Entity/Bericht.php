@@ -15,6 +15,10 @@ use ApiPlatform\Core\Bridge\Doctrine\Orm\Filter\SearchFilter;
 
 /**
  * @ApiResource(
+ *
+ *     collectionOperations={"get", "post"},
+ *     itemOperations={"get", "put", "delete"},
+ *
  *     normalizationContext={"groups"={"bericht:read"}},
  *     denormalizationContext={"groups"={"bericht:write"}}
  * )
@@ -79,9 +83,9 @@ class Bericht
         return $this->body;
     }
 
-    public function setBody(string $body, TextAreaService $textAreaService): self
+    public function setBody(string $body): self
     {
-        $this->body = $textAreaService->stripTags($body);
+        $this->body = $body;
 
         return $this;
     }

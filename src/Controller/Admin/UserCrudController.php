@@ -30,6 +30,16 @@ class UserCrudController extends AbstractCrudController
                     ->setIcon("fa fa-plus");
             }
             )
+            ->update(Crud::PAGE_NEW,Action::SAVE_AND_RETURN, function (Action $action) {
+                return $action
+                    ->setLabel("Maak nieuwe vrijwilliger aan");
+            }
+            )
+            ->update(Crud::PAGE_NEW,Action::SAVE_AND_ADD_ANOTHER, function (Action $action) {
+                return $action
+                    ->setLabel("Maak vrijwilliger aan en voeg er nog een toe");
+            }
+            )
             ->update(Crud::PAGE_INDEX, Action::EDIT, function (Action $action) {
                 return $action
                     ->setLabel("Pas aan")
@@ -47,7 +57,9 @@ class UserCrudController extends AbstractCrudController
     public function configureCrud(Crud $crud): Crud
     {
         return $crud
-            ->setPageTitle("index", "Vrijwilligers");
+            ->setPageTitle("index", "Vrijwilligers")
+            ->setPageTitle("new", "Nieuwe vrijwilliger")
+            ->setPageTitle("edit", "Werk vrijwilliger bij");
     }
 
 

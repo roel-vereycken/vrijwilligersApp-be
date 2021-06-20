@@ -2,25 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f5ba5f56-2d61-43d2-9383-2748aee305b8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Controller/SecurityController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Services/TextAreaService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/please_composer_install" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/.htaccess" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/deploy.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DataPersister/BerichtDataPersister.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DataPersister/OpmerkingDataPersister.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/EventListener/JWTCreatedListener.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vrijwilligersApp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vrijwilligersApp.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/vich_uploader.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/vich_uploader.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/DashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/DashboardController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/EventCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/EventCrudController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/EventTaakCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/EventTaakCrudController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/UserCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/UserCrudController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Bericht.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Bericht.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Categorie.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Categorie.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Event.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Event.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/EventTaak.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/EventTaak.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Locatie.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Locatie.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Opmerking.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Opmerking.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Taak.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Taak.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/TextAreaService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/TextAreaService.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -30,7 +37,9 @@
   </component>
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
-    <execution />
+    <execution>
+      <executable path="composer" />
+    </execution>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -136,7 +145,6 @@
       <path value="$PROJECT_DIR$/vendor/symfony/translation" />
       <path value="$PROJECT_DIR$/vendor/symfony/intl" />
       <path value="$PROJECT_DIR$/vendor/easycorp/easyadmin-bundle" />
-      <path value="$PROJECT_DIR$/vendor/symfony/mime" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn" />
       <path value="$PROJECT_DIR$/vendor/jms/metadata" />
       <path value="$PROJECT_DIR$/vendor/vich/uploader-bundle" />
@@ -144,6 +152,8 @@
       <path value="$PROJECT_DIR$/vendor/lcobucci/jwt" />
       <path value="$PROJECT_DIR$/vendor/lcobucci/clock" />
       <path value="$PROJECT_DIR$/vendor/lexik/jwt-authentication-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php81" />
+      <path value="$PROJECT_DIR$/vendor/symfony/mime" />
     </include_path>
   </component>
   <component name="ProjectId" id="1siIMeqMqmHwlOJ53uTb5NXh6Md" />
@@ -158,6 +168,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -207,7 +218,14 @@
       <workItem from="1623609120276" duration="840000" />
       <workItem from="1623666115451" duration="7724000" />
       <workItem from="1623680785493" duration="4938000" />
-      <workItem from="1623757832702" duration="10018000" />
+      <workItem from="1623757832702" duration="10111000" />
+      <workItem from="1623842847312" duration="11558000" />
+      <workItem from="1623859433055" duration="935000" />
+      <workItem from="1623861430925" duration="10325000" />
+      <workItem from="1623930055597" duration="7180000" />
+      <workItem from="1623965079400" duration="1620000" />
+      <workItem from="1624018220966" duration="5836000" />
+      <workItem from="1624192379355" duration="10622000" />
     </task>
     <task id="LOCAL-00001" summary="admin Velden in NL fix">
       <created>1621610281312</created>
@@ -265,7 +283,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623676901153</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="check">
+      <created>1623798542837</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1623798542837</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -290,30 +315,38 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="178" y="124" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1621536541826" />
-    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1623682238916">
+    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1624217107859">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1623682238916" />
-    <state x="359" y="0" key="CommitChangelistDialog2" timestamp="1623676899777">
+    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1624217107859" />
+    <state x="359" y="0" key="CommitChangelistDialog2" timestamp="1623798542057">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="359" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1623676899777" />
+    <state x="359" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1623798542057" />
+    <state x="545" y="325" key="ComposerInitDialogKey" timestamp="1623850351136">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="545" y="325" key="ComposerInitDialogKey/0.0.1536.824@0.0.1536.824" timestamp="1623850351136" />
     <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1623682182406">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1623682182406" />
-    <state x="263" y="220" key="NewPhpClassDialog" timestamp="1623797811980">
+    <state x="263" y="220" key="NewPhpClassDialog" timestamp="1624226396343">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="263" y="220" key="NewPhpClassDialog/0.0.1536.824@0.0.1536.824" timestamp="1623797811980" />
-    <state x="604" y="336" key="NewPhpFileDialog" timestamp="1623677565707">
+    <state x="263" y="220" key="NewPhpClassDialog/0.0.1536.824@0.0.1536.824" timestamp="1624226396343" />
+    <state x="604" y="336" key="NewPhpFileDialog" timestamp="1623848008550">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="604" y="336" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1623677565707" />
-    <state x="361" y="132" key="Vcs.Push.Dialog.v2" timestamp="1623676908063">
+    <state x="604" y="336" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1623848008550" />
+    <state x="277" y="57" key="SettingsEditor" timestamp="1623850126712">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="132" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1623676908063" />
+    <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1623850126712" />
+    <state x="361" y="132" key="Vcs.Push.Dialog.v2" timestamp="1623798548398">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="132" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1623798548398" />
     <state x="478" y="145" width="590" height="534" key="find.popup" timestamp="1623346685315">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

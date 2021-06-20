@@ -3,5 +3,5 @@ vich_uploader:
 
     mappings:
        afbeeldingen:
-          uri_prefix: /images/afbeeldingen
-          upload_destination: '%kernel.project_dir%/public/images/afbeeldingen'
+          uri_prefix: 'https://wdev2.be/roel21/eindwerk/images/afbeeldingen'
+          upload_destination: '/var/www/html/wdev2.be/web/roel21/eindwerk/images/afbeeldingen'

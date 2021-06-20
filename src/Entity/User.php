@@ -68,7 +68,7 @@ class User implements UserInterface
     private $berichten;
 
     /**
-     * @ORM\OneToMany(targetEntity=Opmerking::class, mappedBy="opmerkingUser")
+     * @ORM\OneToMany(targetEntity=Opmerking::class, mappedBy="opmerkingUser", cascade={"remove"})
      */
     private $opmerkingen;
 

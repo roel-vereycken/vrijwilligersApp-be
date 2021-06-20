@@ -38,7 +38,7 @@ class Taak
     private $omschrijving;
 
     /**
-     * @ORM\OneToMany(targetEntity=EventTaak::class, mappedBy="taakId", cascade={"persist"})
+     * @ORM\OneToMany(targetEntity=EventTaak::class, mappedBy="taakId", cascade={"persist", "remove"})
      */
     private $eventTaken;
 

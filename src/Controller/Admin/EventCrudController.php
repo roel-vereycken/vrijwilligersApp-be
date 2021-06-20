@@ -74,6 +74,7 @@ class EventCrudController extends AbstractCrudController
             TextField::new('Naam'),
             TextField::new('Beschrijving'),
             AssociationField::new("eventCategorie", "Categorie"),
+            AssociationField::new("eventLocatie", "Locatie"),
             DateField::new("Startdatum"),
             DateField::new("Einddatum"),
             TextAreaField::new("afbeeldingFile")
