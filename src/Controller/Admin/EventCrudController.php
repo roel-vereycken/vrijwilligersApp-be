@@ -14,6 +14,7 @@ use EasyCorp\Bundle\EasyAdminBundle\Field\DateField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\IdField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextareaField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 use Vich\UploaderBundle\Form\Type\VichImageType;
 
@@ -72,7 +73,7 @@ class EventCrudController extends AbstractCrudController
             IdField::new('id')
                 ->onlyOnIndex(),
             TextField::new('Naam'),
-            TextField::new('Beschrijving'),
+            TextEditorField::new('Beschrijving'),
             AssociationField::new("eventCategorie", "Categorie"),
             AssociationField::new("eventLocatie", "Locatie"),
             DateField::new("Startdatum"),
@@ -81,7 +82,7 @@ class EventCrudController extends AbstractCrudController
                 ->setFormType(VichImageType::class)
                 ->onlyOnForms(),
             ImageField::new('Afbeelding')
-                ->setBasePath('/images/afbeeldingen')
+                ->setBasePath('/roel21/eindwerk/images/afbeeldingen')
                 ->hideOnForm(),
             CollectionField::new("eventTaken", "Taken")->onlyOnIndex(),
 

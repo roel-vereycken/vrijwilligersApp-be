@@ -287,6 +287,6 @@ class Event
     // toevoeging voor easyadmin: om de foreign key te herkennen
     public function __toString()
     {
-        return $this->getNaam();
+        return $this->getNaam() . " : " . $this->getStartDatum()->format('d-m-Y') . (($this->getEindDatum() != null) ?  " - " . $this->getEindDatum()->format('d-m-Y') : "");
     }
 }

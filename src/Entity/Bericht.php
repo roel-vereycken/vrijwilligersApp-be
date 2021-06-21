@@ -70,7 +70,7 @@ class Bericht
     public function __construct()
     {
         $this->opmerkingen = new ArrayCollection();
-        $this->createdAt = new\DateTimeImmutable('+2 hours');
+        $this->createdAt = new\DateTimeImmutable();
     }
 
     public function getId(): ?int
