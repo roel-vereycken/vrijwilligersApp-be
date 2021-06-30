@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f5ba5f56-2d61-43d2-9383-2748aee305b8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/config/packages/lexik_jwt_authentication.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/RegistrationController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/EventCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/EventCrudController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Bericht.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Bericht.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/deploy.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/deploy.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Event.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Event.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -205,7 +204,12 @@
       <workItem from="1623965079400" duration="1620000" />
       <workItem from="1624018220966" duration="5836000" />
       <workItem from="1624192379355" duration="10754000" />
-      <workItem from="1624286547454" duration="5525000" />
+      <workItem from="1624286547454" duration="9126000" />
+      <workItem from="1624367104004" duration="1488000" />
+      <workItem from="1624455415020" duration="4932000" />
+      <workItem from="1624541240930" duration="4842000" />
+      <workItem from="1624621027550" duration="3404000" />
+      <workItem from="1624974160236" duration="1479000" />
     </task>
     <task id="LOCAL-00001" summary="admin Velden in NL fix">
       <created>1621610281312</created>
@@ -277,7 +281,14 @@
       <option name="project" value="LOCAL" />
       <updated>1624227975480</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="eventListener en dataPersister">
+      <created>1624314035424</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1624314035424</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -307,10 +318,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1624296440246" />
-    <state x="359" y="0" key="CommitChangelistDialog2" timestamp="1624227974387">
+    <state x="359" y="0" key="CommitChangelistDialog2" timestamp="1624314034615">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="359" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1624227974387" />
+    <state x="359" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1624314034615" />
     <state x="545" y="325" key="ComposerInitDialogKey" timestamp="1623850351136">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -331,10 +342,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1623850126712" />
-    <state x="361" y="132" key="Vcs.Push.Dialog.v2" timestamp="1624227982741">
+    <state x="361" y="132" key="Vcs.Push.Dialog.v2" timestamp="1624314036862">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="132" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1624227982741" />
+    <state x="361" y="132" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1624314036862" />
     <state x="478" y="145" width="590" height="534" key="find.popup" timestamp="1623346685315">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

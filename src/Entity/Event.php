@@ -37,7 +37,7 @@ class Event
      * @ORM\Id
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
-     * @Groups({"event:read"})
+     * @Groups({"event:read", "user:read"})
      */
     private $id;
 

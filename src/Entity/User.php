@@ -35,7 +35,7 @@ class User implements UserInterface
 
     /**
      * @ORM\Column(type="string", length=180, unique=true)
-     * @Groups ({"user:read", "user:write"})
+     * @Groups ({"bericht:read", "user:read", "user:write"})
      */
     private $email;
 
@@ -47,6 +47,7 @@ class User implements UserInterface
     /**
      * @var string The hashed password
      * @ORM\Column(type="string")
+     * @Groups({"user:write"})
      */
     private $password;
 
